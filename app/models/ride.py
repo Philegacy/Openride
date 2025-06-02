@@ -22,4 +22,5 @@ class Ride(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
     # Relationships
-    driver = relationship("User", back_populates="rides") 
+    driver = relationship("User", back_populates="rides")
+    payments = relationship("Payment", back_populates="ride") 
